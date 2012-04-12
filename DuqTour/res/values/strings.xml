@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Duquesne Tour Guide</string>
+    <string name="about_text">Welcome to the Duquesne University Tour App!  This application gives the user a virtual
+        tour of the Duquesne University.  Users will walk around campus and the tour guide will notify when the user
+        is near a hot spot.</string>
+
+</resources>
