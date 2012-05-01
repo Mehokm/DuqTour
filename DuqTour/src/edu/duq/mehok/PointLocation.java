@@ -6,16 +6,26 @@ public class PointLocation {
 	private double longitude;
 	private String title;
 	private String description;
+	private int radius;
 	
 	public PointLocation() {
 		
 	}
 	
-	public PointLocation(double latitude, double longitude, String title, String description) {
+	public PointLocation(double latitude, double longitude, int radius, String title, String description) {
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.title = title;
 		this.description = description;
+		this.radius = radius;
+	}
+
+	public int getRadius() {
+		return radius;
+	}
+
+	public void setRadius(int radius) {
+		this.radius = radius;
 	}
 
 	/**

@@ -43,7 +43,8 @@ public final class R {
         public static final int descriptions=0x7f040000;
         public static final int latitudes=0x7f040001;
         public static final int longitudes=0x7f040002;
-        public static final int titles=0x7f040003;
+        public static final int radii=0x7f040003;
+        public static final int titles=0x7f040004;
     }
     public static final class string {
         public static final int about_text=0x7f050001;

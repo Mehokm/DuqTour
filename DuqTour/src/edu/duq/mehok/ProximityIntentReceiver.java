@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.location.LocationManager;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +36,10 @@ public class ProximityIntentReceiver extends BroadcastReceiver {
 		if (entering) {
 			Log.d(getClass().getSimpleName(), "entering");
 			
+			Vibrator vibrator = (Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE);
+			
+			vibrator.vibrate(300);
+			
 			dialog = new Dialog(context);
 	        dialog.setContentView(R.layout.location_dialog);
 	        dialog.setTitle(title);
@@ -63,7 +68,13 @@ public class ProximityIntentReceiver extends BroadcastReceiver {
 		else {
 			Log.d(getClass().getSimpleName(), "exiting");
 			
-			dialog.dismiss();
+			if(dialog.isShowing()) {
+				dialog.dismiss();
+			}
+			
+			Vibrator vibrator = (Vibrator)context.getSystemService(Context.VIBRATOR_SERVICE);
+			
+			vibrator.vibrate(100);
 			
 			Toast.makeText(context, "You are leaving " + title, Toast.LENGTH_LONG).show();
 		}			  

@@ -11,6 +11,7 @@
   android:id="@+id/map_view"
   android:layout_width="fill_parent" 
   android:layout_height="fill_parent"
+  android:screenOrientation="portrait"
   android:clickable="true" 
   android:enabled="true" 
   android:apiKey="0vfsdVABWfKUgubPOjsOwDBSd06fi-Fsg6wXa5Q" />
