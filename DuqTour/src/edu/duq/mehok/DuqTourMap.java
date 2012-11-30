@@ -126,7 +126,7 @@ public class DuqTourMap extends MapActivity {
         			mc.animateTo(meOverlay.getMyLocation());
         		}
         	}
-        	else if(location.getAccuracy() > 50.0) {
+        	else if(location.getAccuracy() >= 30.0) {
         		progDiag = ProgressDialog.show(DuqTourMap.this, "Finding GPS", "Sorry, GPS signal is bad.");
         	}
         	if(meOverlay.getMyLocation() != null) {
